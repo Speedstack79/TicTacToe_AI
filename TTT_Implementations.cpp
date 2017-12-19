@@ -171,7 +171,7 @@ int TicTacToe::minimax (int level, bool max)
 				if (board[i][j] == '~')
 				{
 					board[i][j] = computer;
-					int mm_result = minimax(level + 1, !max); //why level + 1?
+					int mm_result = minimax(level + 1, !max);
 					max_score = (max_score > mm_result) ? max_score : mm_result;
 					board[i][j] = '~';
 				}
@@ -189,7 +189,7 @@ int TicTacToe::minimax (int level, bool max)
 				if (board[i][j] == '~')
 				{
 					board[i][j] = human;
-					int mm_result = minimax(level - 1, !max); //why level - 1?
+					int mm_result = minimax(level - 1, !max);
 					min_score = (min_score < mm_result) ? min_score : mm_result;
 					board[i][j] = '~';
 				}
